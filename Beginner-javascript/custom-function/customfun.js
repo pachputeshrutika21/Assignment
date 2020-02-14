@@ -16,5 +16,6 @@ console.log(`your total is $${mytotal}, $${mytotal1}`);
 function myname(firstname)
 {
    console.log(`Hello ${firstname}`);
+  // return `Hello ${firstname}`;
 }
 myname('qliktag');
