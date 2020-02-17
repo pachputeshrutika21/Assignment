@@ -2,20 +2,31 @@
 // console.log("it works!!!");
 // let bill=100;
 // const works=1.13;
-function custombill(bill,works)
-{
-    console.log("hii i am try to function!!!");//fuction body
-    const total=bill*works;
-    return total;
-}
-const mytotal=custombill(11,3);
-bill=200;
-const mytotal1=custombill(22,4);
-console.log(`your total is $${mytotal}, $${mytotal1}`);
+// function custombill(bill,works)
+// {
+//     console.log("hii i am try to function!!!");//fuction body
+//     const total=bill*works;
+//     return total;
+// }
+// const mytotal=custombill(11,3);
+// bill=200;
+// const mytotal1=custombill(22,4);
+// console.log(`your total is $${mytotal}, $${mytotal1}`);
 
-function myname(firstname)
+// function myname(firstname)
+// {
+//    console.log(`Hello ${firstname}`);
+//   // return `Hello ${firstname}`;
+// }
+// myname('qliktag');
+
+
+function doctorize(name)
 {
-   console.log(`Hello ${firstname}`);
-  // return `Hello ${firstname}`;
+  console.log( `Dr. ${name}`);
 }
-myname('qliktag');
+function anyMore(name)
+{
+  console.log(`Hiiiii ${name}`)
+}
+anyMore(doctorize('shrutika'));
