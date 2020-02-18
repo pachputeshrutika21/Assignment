@@ -8,16 +8,17 @@
 // //Annonymous function
 
 // // function (firstname)
+
 // // {
 // //     return `Hello ${firstname}`;
 // // }
 
 // //function expression
 
-// // const doctorize=function(firstname)
-// // {
-// //     console.log(`Hello ${firstname}`);
-// // };
+const doctorize=function(firstname)
+{
+    console.log(`Hello ${firstname}`);
+};
 
 // // //annonymous function
 // // const cm=function(inches)
@@ -25,7 +26,7 @@
 // //     return inches*1.75;
 // // };
 // //fat-arrow functiom
-// // const cm=inches=>inches*2.25;
+ const cm=inches=>inches*2.25;
 
 // // const add=(a,b)=>a+b;
 
