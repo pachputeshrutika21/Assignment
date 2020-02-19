@@ -1,0 +1,34 @@
+<!!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Calculator
+    </title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form>
+          
+        <label for="first">Enter NO.</label>
+        <input type="number" class="first" name="first" id="first" >
+        <br>
+        <select id="operator" value="operator">
+            <option value="+">ADD</option>
+            <option value="-">SUB</option>
+            <option value="*">Mult</option>
+            <option value="/">DIV</option>
+        </select>
+        <br>
+        <label for="second">Enter NO.</label>
+        <input type="number" name="second" id="second" >
+        <br>
+       
+        <button type="button" onclick="calculate()" class="butt">submit</button>
+        <button type="reset">reset</button>
+        <input type="text" id="result">
+      </form>
+    </div>
+    <script src="calculator.js"></script>
+
+  </body>
+</html>

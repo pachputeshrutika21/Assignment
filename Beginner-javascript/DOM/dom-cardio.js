@@ -16,3 +16,8 @@ div.innerHTML=ul;
 console.log(div);
 
 const img=document.createElement('img');
+img.src="nature.jpeg";
+img.width=200;
+img.classList.add('cute');
+img.alt="cute puppy";
+div.appendChild(img);
