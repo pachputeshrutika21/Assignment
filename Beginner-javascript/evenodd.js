@@ -1,5 +1,6 @@
 /* eslint-disable*/
 const butts=document.querySelector('.button');
+
 function clickedNumber()
 {
     var no1=parseInt(document.getElementById('n1').value);
