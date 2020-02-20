@@ -25,7 +25,7 @@ function calculate(first=20,second=30)
     }
     if(operator=='%')
     {
-        module();
+        module(first,second);
     }
 
     if(first==null)
