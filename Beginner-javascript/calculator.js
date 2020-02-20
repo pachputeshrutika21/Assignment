@@ -45,4 +45,3 @@ function module(first,second)
 document.getElementById('res').innerHTML=`the modulus ${first} and ${second} is ${total}`;
 }
 butt.addEventListener('click',module);
-//butt.addEventListener('click',calculate);
