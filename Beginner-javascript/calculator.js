@@ -32,7 +32,7 @@ function calculate(first=20,second=30)
     if(operator==='%')
     {
         total=first%second;
-      document.getElementById('res').innerHTML="the modulus is"+first+"and"+second+"is"+total;
+    document.getElementById('res').innerHTML=`the modulus ${first} and ${second} is ${total}`;
     }
     if(first==null)
     {
