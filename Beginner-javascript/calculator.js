@@ -5,8 +5,8 @@ function calculate(first=20,second=30)
 {
     var first=parseInt(document.getElementById('first').value);
     var second=parseInt(document.getElementById('second').value);
-    document.getElementById('fir').innerHTML=first;
-    document.getElementById('sec').innerHTML=second;
+    document.getElementById('first').innerHTML=first;
+    document.getElementById('second').innerHTML=second;
     var operator=document.getElementById('operator').value;
     
     if(operator==='+')
@@ -31,17 +31,16 @@ function calculate(first=20,second=30)
     }
     if(operator==='%')
     {
-        res=first%second;
-      //document.getElementById('res').innerHTML=first%second;
-      document.writeln("the modulus is"+first+"and"+second+"is"+res);
+        total=first%second;
+      document.getElementById('res').innerHTML="the modulus is"+first+"and"+second+"is"+total;
     }
     if(first==null)
     {
         alert("plz enter no");
     }
-    document.wr
    
     console.log(`first no is::${first}`);
 console.log(`second no is::${second}`);
 }
+
 butt.addEventListener('click',calculate);
