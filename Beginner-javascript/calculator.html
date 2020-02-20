@@ -1,4 +1,4 @@
-<!!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>
@@ -10,22 +10,24 @@
       <form>
           
         <label for="first">Enter NO.</label>
-        <input type="number" class="first" name="first" id="first" >
+        <input type="number" class="first" name="first" id="first" required>
+        
         <br>
         <select id="operator" value="operator">
             <option value="+">ADD</option>
-            <option value="-">SUB</option>
+            <option value="-">SUB</option>  
             <option value="*">Mult</option>
             <option value="/">DIV</option>
         </select>
         <br>
         <label for="second">Enter NO.</label>
-        <input type="number" name="second" id="second" >
+        <input type="number" class="second" name="second" id="second" required>
         <br>
        
-        <button type="button" onclick="calculate()" class="butt">submit</button>
-        <button type="reset">reset</button>
-        The result is::<input type="text" id="result">
+        <button style="background-color: green;" type="button" onclick="calculate()" class="butt" >submit</button>
+        <button style="background-color: blue;" type="reset">reset</button>
+        <br>
+        The result is::<input type="text" class="result" id="result">
       </form>
     </div>
     <script src="calculator.js"></script>
