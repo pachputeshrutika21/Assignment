@@ -21,7 +21,7 @@ function calculate(first=20,second=30)
     function module(first,second)
     {
         total=first%second;
-        document.getElementById('res').innerHTML=`the modulus ${first} and ${second} is ${total}`;
+       
     }
     if(operator==='+')
     {
@@ -42,6 +42,7 @@ function calculate(first=20,second=30)
     if(operator=='%')
     {
         module(first,second);
+        document.getElementById('res').innerHTML=`the modulus ${first} and ${second} is ${total}`;
     }
 
 console.log(`first no is::${first}`);
