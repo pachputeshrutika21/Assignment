@@ -21,6 +21,6 @@ console.log(`you win a ${prizes.get(score)}`);
 const ul=document.querySelector('.prizes');
 for(const [points,prize] of prizes)
 {
-  const li=`<li>${points}-${prize}</li>`;
+  const li=`<li>${points} - ${prize}</li>`;
   ul.insertAdjacentHTML('beforeend',li);
 }
