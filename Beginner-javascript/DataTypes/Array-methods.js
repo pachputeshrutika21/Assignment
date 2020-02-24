@@ -60,6 +60,36 @@ const wes={name:'wes'};
 const people=[{name:'bos'},wes];
 
 //callback methods
+const peoples=[
+    {
+        birthday:'April 21,1999',
+        names:{
+            first:"shrutika",
+            last:"pachpute"
+        }
+    },
+    {
+        birthday:'februwary 21,1998',
+        names:{
+            first:"wes",
+            last:"bos"
+        }
+    },
+    {
+        birthday:'jan 04,2007',
+        names:{
+            first:"shreyash",
+            last:"pachpute"
+        }
+    },
+    {
+        birthday:'march 23,2004',
+        names:{
+            first:"shreya",
+            last:"pachpute"
+        }
+    }
+];
 
 const prices={
     burger:150,
@@ -160,6 +190,7 @@ function isSortOrder(a,b)
     return a-b;
 }
 console.log(orderTotals.sort(isSortOrder));
+const face=['😁','😍','😃','😁','😍','😸'];
 
 const productSort=Object.entries(prices).sort(function(a,b)
 {
@@ -169,3 +200,110 @@ const productSort=Object.entries(prices).sort(function(a,b)
    return aPrice-bPrice;
 });
 console.table(Object.fromEntries(productSort));
+
+//looping methods
+function logTopping(topping,index,originalArray)
+{
+    const nextTopping=originalArray[index+1];
+    const prevTopping=originalArray[index-1];
+    prevTopping?console.log(prevTopping):null;
+    // console.log(toppings,index,array);
+    console.log(topping);
+   index===originalArray.length-1?console.log('goodBye'):console.log("getting the next topping");
+   nextTopping?console.log(nextTopping):null;
+   index===originalArray.length&&console.log('goodBye');
+    console.log('----🍕------');
+
+  
+}
+toppings.forEach(logTopping);
+
+//toppings.forEach(topping=>console.log(topping));;
+  //map,filter ,reduce
+
+
+function addArms(face)
+{
+    return `✋ ${face} ✋`;
+}
+const toys=face.map(addArms);
+console.log(toys);
+
+const bosify=(name=>`${name} bos`);
+const capitalize=(word=>`${word[0].toUpperCase()}  ${word.slice(1)}`);
+const fullName=['wes','bos','poppy'].map(capitalize).map(bosify);
+console.log(fullName);
+
+const orderTotalsMap=orderTotals.map(total=>total*1.13);
+console.log(orderTotalsMap);
+
+
+
+const cleanPeople=peoples.map(function(person)
+{
+    console.log(person);
+    const birthday=new Date(person.birthday).getTime();
+    console.log(birthday);
+    const now=new Date();
+    const age=Math.floor((now-birthday)/31536000000);
+    console.log(age);
+    return{
+        age,
+        name:`${person.names.first} ${person.names.last}`
+    }
+});
+console.table(cleanPeople);
+
+const over20=cleanPeople.filter(person=>person.age>20);
+console.table(over20);
+
+const students=[
+    {
+        id:101,
+        name:'shrutika',
+        last:'pachpute'
+    },
+    {
+        id:102,
+        name:'shreya',
+        last:'pachpute'
+    },
+    {
+        id:103,
+        name:'shreyash',
+        last:'pachpute'
+    }
+];
+
+
+function isById(id)
+{
+    return function isStudent(student1)
+    {
+        return student1.id===id;
+    }
+}
+function findByProp(prop,propWeAreLookingFor)
+{
+    return function isStudent(student1)
+    {
+        return student1[prop]===propWeAreLookingFor;
+    }
+}
+
+const student1=students.find(isById(101));
+const student2=students.find(findByProp('id','102'));
+console.table(student1);
+console.table(student2);
+
+//reduce
+
+function tallyNumbers(tally,currentTotal)
+{
+
+console.log(`the tally is ${tally}`);
+console.log(`the current total is ${currentTotal}`);
+console.log(`---------`);
+return tally+currentTotal;
+}
+const allOrders=orderTotals.reduce(tallyNumbers,0);
