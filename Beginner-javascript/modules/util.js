@@ -1,5 +1,6 @@
 /* eslint-disable*/
-function returnHi(name)
-{
-    return `hi ${name}`;
+const last="pachpute";
+export function returnHi(name){
+    console.log(`Hiii ${name} ${last}`);
 }
+export {last};
