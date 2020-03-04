@@ -49,26 +49,34 @@ const doctorize=function(firstname)
 //     console.log(`Your age is:${age}`);
 // })(10);
 //Methods!!!!
-const wes={
-    name:'wes',
-    //first way
-    sayHi:function()
-    {
-console.log('Hiii ws');
-    },
-    //short-hand
-    yess(){
-        console.log("i am in shorthand");
-    },
-    //Arrow function 
-    wisperHi:()=>{
-        console.log("i am in arrow");
-    }
-}
-const button=document.querySelector('.clickme');
-function handleClick(){
-    console.log('great clicking!!!!!');
-}
-button.addEventListener('click',function(){
-    console.log("good job!!!!");
-});
+// const wes={
+//     name:'wes',
+//     //first way
+//     sayHi:function()
+//     {
+// console.log('Hiii ws');
+//     },
+//     //short-hand
+//     yess(){
+//         console.log("i am in shorthand");
+//     },
+//     //Arrow function 
+//     wisperHi:()=>{
+//         console.log("i am in arrow");
+//     }
+// }
+// const button=document.querySelector('.clickme');
+// function handleClick(){
+//     console.log('great clicking!!!!!');
+// }
+// button.addEventListener('click',function(){
+//     console.log("good job!!!!");
+// });
+const greeting=(name)=>alert('Hello ' + name);
+  
+  const processUserInput=(callback)=> {
+    var name = prompt('Please enter your name.');
+    callback(name);
+  }
+  
+  processUserInput(greeting);
