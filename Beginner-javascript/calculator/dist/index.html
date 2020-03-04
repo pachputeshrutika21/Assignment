@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Calculator
+    </title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form>
+          
+        <label for="first">Enter NO.</label>
+        <input type="number" class="first" name="first" id="first" required="">
+        
+        <br>
+        <select id="operator" value="operator">
+            <option value="+">ADD</option>
+            <option value="-">SUB</option>  
+            <option value="*">Mult</option>
+            <option value="/">DIV</option>
+            <option value="%">modulus</option>
+        </select>
+        <br>
+        <label for="second">Enter NO.</label>
+        <input type="number" class="second" name="second" id="second" required="">
+        <br>
+       
+        <button style="background-color: green;" type="button" class="butts">submit</button>
+        <button style="background-color: blue;" type="reset">reset</button>
+        <br>
+        The result is::<input type="text" class="result" id="result">
+        
+       <div><p> <span id="res"></span></p>
+      </div></form>
+      
+    </div>
+    <script src="/calculator.e31bb0bc.js" type="module"></script>
+  </body>
+</html>
